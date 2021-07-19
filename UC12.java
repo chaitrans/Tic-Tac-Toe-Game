@@ -2,7 +2,7 @@ package tictactoe;
 
 import java.util.Scanner;
 
-public class UC8  {
+public class UC12  {
     static final int USER = 0;
     static final int COMPUTER = 1;
     static char[] board;
