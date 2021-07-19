@@ -2,7 +2,7 @@ package tictactoe;
 
 import java.util.Scanner;
 
-public class UC3  {
+public class UC4  {
     static char[] board;
     static char playerChoice;
     static char computerChoice;
@@ -12,6 +12,7 @@ public class UC3  {
         createBoard();
         showBoard();
         chooseLetter();
+        playerTurn();
     }
 
     // UC1: Creating empty tic-tac-toe board
@@ -48,4 +49,15 @@ public class UC3  {
         System.out.println("---------");
         System.out.println(board[7]+ " | " +board[8]+ "| "+board[9]);
     }
+
+    // UC4: ability to make move to desired position and ensures index is free
+    public static void playerTurn() {
+        System.out.println("Enter the position where you want to make a move : ");
+        int playerPosition = sc.nextInt();
+        if (board[playerPosition] == ' ') {
+            board[playerPosition] = playerChoice;
+        }
+        showBoard();
+    }
 }
+
